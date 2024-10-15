@@ -1,0 +1,22 @@
+body {
+  font-family: "Work Sans", sans-serif;
+}
+.logobar {
+  padding: 15px 0;
+  border-bottom: 3px solid #111;
+  .hmsprite {
+    background: url(../images/rediff-logo.png) no-repeat -50px -3px;
+  }
+  .topicons {
+    a {
+      &::before {
+        content: none;
+      }
+      &.guruicon {
+        &::after {
+          left: auto;
+        }
+      }
+    }
+  }
+}
