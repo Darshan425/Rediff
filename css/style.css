@@ -46,7 +46,8 @@ body {
   margin: 0 auto 20px auto;
 }
 .navbar .navbarul {
-  border-bottom: 1px solid #000;
+  border-top: 2px solid #000;
+  padding; 5px 0 0 0;
 }
 .navbar .navbarul li {
   padding: 10px 15px;
@@ -59,6 +60,7 @@ body {
 .navbar .navbarul li::after {
   top: 50%;
   transform: translateY(-50%);
+  display: none;
 }
 .navbar .navbarul li:first-child:before {
   background: #fff;
@@ -194,15 +196,30 @@ body {
 }
 .nbox .more:has(.backcricket)::before {
   content: "C";
+  background: #000 url(../images/cric.png) no-repeat center center;
+  content: "";
+  background-size: 70%;
+}
+.nbox .more:has(.backnews)::before {
+  content: "N";
+  background: url(../images/news.png) no-repeat center center;
+  content: "";
+  background-size: 100%;
 }
 .nbox .more:has(.backmovies)::before {
   content: "M";
+  background: #000 url(../images/movies.png) no-repeat center center;
+  content: "";
+  background-size: 70%;
 }
 .nbox .more:has(.backgetahead)::before {
   content: "G";
 }
 .nbox .more:has(.backvid)::before {
   content: "V";
+  background: url(../images/videos.png) no-repeat center center;
+  content: "";
+  background-size: 100%;
 }
 .nbox .more:has(.backshop)::before {
   content: "T";
@@ -215,6 +232,9 @@ body {
 }
 .nbox .more:has(.backsports)::before {
   content: "S";
+  background: #000 url(../images/sports.png) no-repeat center center;
+  content: "";
+  background-size: 80%;
 }
 .backmarketnews::after {
   content: "NEW";
