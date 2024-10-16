@@ -41,16 +41,20 @@ body {
   max-width: 1100px;
 }
 .navbar {
-  background: #000;
+  background: #fff;
   height: auto;
   margin: 0 auto 20px auto;
 }
+.navbar .navbarul {
+  border-bottom: 1px solid #000;
+}
 .navbar .navbarul li {
   padding: 10px 15px;
-  color: #fff;
+  color: #111;
+  font-weight: 600;
 }
 .navbar .navbarul li a {
-  color: #fff;
+  color: #111;
 }
 .navbar .navbarul li::after {
   top: 50%;
@@ -69,7 +73,7 @@ body {
   top: 50%;
   transform: translateY(-50%);
   background: transparent;
-  border: 2px solid #fff;
+  border: 2px solid #111;
 }
 .navbar .subnews_icon {
   top: 50%;
@@ -88,10 +92,10 @@ body {
   height: auto;
   width: auto;
   background: transparent;
-  color: #fff;
+  color: #111;
 }
 .div_newssearch input::placeholder {
-  color: #fff;
+  color: #111;
 }
 .red_container .tabtable .tabs.active {
   color: #111;
@@ -100,8 +104,8 @@ body {
   padding: 0;
 }
 .secstorybox h3 {
-  border-bottom: solid 2px #111 !important;
-  color: #111 !important;
+  border-bottom: solid 2px #111;
+  color: #111;
   font-size: 16px;
   font-weight: 600;
   padding: 5px 0;
@@ -121,13 +125,14 @@ body {
 }
 .nbox .more span,
 .nbox .more a {
-  background: #111 !important;
+  background: transparent !important;
   color: #fff;
   font-size: 12px;
   text-transform: capitalize;
   border-radius: 0;
   font-weight: bold;
   padding: 5px 15px;
+  opacity: 0;
 }
 .bigstory .more span,
 .bigstory .more a {
@@ -138,12 +143,78 @@ body {
   border-radius: 0;
   font-weight: bold;
   padding: 5px 15px;
+  opacity: 0;
+}
+.bigstory {
+  position: relative;
 }
 .bigstory .more {
   height: auto;
 }
 .nbox .more {
   height: auto;
+  position: absolute;
+  bottom: 30px;
+}
+.bigstory .more {
+  height: auto;
+  position: absolute;
+  bottom: 0;
+}
+.bigstory .more::before {
+  content: "GH";
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  border-radius: 25px;
+  line-height: initial;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99;
+}
+.nbox .more::before {
+  content: "N";
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  border-radius: 25px;
+  line-height: initial;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99;
+}
+.nbox .more:has(.backgurus)::before {
+  content: "R";
+}
+.nbox .more:has(.backcricket)::before {
+  content: "C";
+}
+.nbox .more:has(.backmovies)::before {
+  content: "M";
+}
+.nbox .more:has(.backgetahead)::before {
+  content: "G";
+}
+.nbox .more:has(.backvid)::before {
+  content: "V";
+}
+.nbox .more:has(.backshop)::before {
+  content: "T";
+}
+.nbox .more:has(.backmarketnews)::before {
+  content: "MN";
+}
+.nbox .more:has(.backbusiness)::before {
+  content: "B";
+}
+.nbox .more:has(.backsports)::before {
+  content: "S";
 }
 .backmarketnews::after {
   content: "NEW";
@@ -164,23 +235,66 @@ body {
 }
 .nbox {
   width: 200px;
-  height: 250px;
-  margin: 9px 20px 35px 0;
+  height: 270px;
+  margin: 9px 20px 20px 0;
+  position: relative;
 }
 .nbox .hdtitle,
 .bigstory .hdtitle {
   font-size: 14px;
-  line-height: 1.6;
-  height: auto;
+  line-height: 1.5;
   margin: 15px 0 0 0;
-  padding: 0 0 2px 0;
+  padding: 0 0 2px 40px;
   font-weight: 500;
   color: #174e96;
   font-family: "Libre Baskerville", serif;
+  position: relative;
 }
-.rediffgurus h3 a {
-  color: #111;
+.nbox::after {
+  content: "22hours ago";
+  font-weight: 500;
+  position: absolute;
+  bottom: 18px;
+  left: 35px;
+  color: #9b9595;
 }
+.bigstory::after {
+  content: "22hours ago";
+  font-weight: 500;
+  position: absolute;
+  bottom: 0;
+  left: 35px;
+  color: #9b9595;
+}
+/* h2.hdtitle::before {
+  content: "N";
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #000;
+  color: #fff;
+  border-radius: 25px;
+  line-height: initial;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+/* h2.hdtitle.cricket-icon::before {
+  background: url(../images/cricket.svg) no-repeat 0 0;
+  background-size: 100%;
+}
+h2.hdtitle.movie-icon::before {
+  background: url(../images/movies-icon.svg) no-repeat 0 0;
+  background-size: 100%;
+}
+h2.hdtitle.video-icon::before {
+  background: url(../images/videos.svg) no-repeat 0 0;
+  background-size: 100%;
+} */
+
 .rediffgurus h3 a.hindialso {
   border-bottom: 0;
 }
@@ -318,4 +432,15 @@ body {
 }
 .secstorybox h2 {
   border: 0;
+}
+.vdplayicon:before {
+  content: "4:32";
+  content: "04:32";
+  background: rgb(17 17 17 / 80%);
+  color: #fff;
+  padding: 2px;
+  position: absolute;
+  bottom: 3px;
+  right: 4px;
+  z-index: 9;
 }
