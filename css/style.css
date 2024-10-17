@@ -149,6 +149,7 @@ body {
 }
 .bigstory {
   position: relative;
+  height: 288px;
 }
 .bigstory .more {
   height: auto;
@@ -161,7 +162,7 @@ body {
 .bigstory .more {
   height: auto;
   position: absolute;
-  bottom: 0;
+  bottom: 17px;
 }
 .bigstory .more::before {
   content: "GH";
@@ -192,11 +193,11 @@ body {
   z-index: 99;
 }
 .nbox .more:has(.backgurus)::before {
-  content: "R";
+  content: "RG";
 }
 .nbox .more:has(.backcricket)::before {
   content: "C";
-  background: #000 url(../images/cric.png) no-repeat center center;
+  background: #000 url(../images/cricket-n.png) no-repeat center center;
   content: "";
   background-size: 70%;
 }
@@ -226,6 +227,11 @@ body {
 }
 .nbox .more:has(.backmarketnews)::before {
   content: "MN";
+  background: url(../images/mn.svg) no-repeat -4px 2px;
+  content: "";
+  background-size: cover;
+  width: 40px;
+  height: 40px;
 }
 .nbox .more:has(.backbusiness)::before {
   content: "B";
@@ -260,6 +266,9 @@ body {
   position: relative;
   border-bottom: 1px solid #ccc;
 }
+.bigstory{
+  border-bottom: 1px solid #ccc;
+}
 .nbox .hdtitle,
 .bigstory .hdtitle {
   font-size: 14px;
@@ -283,7 +292,7 @@ body {
   content: "22hours ago";
   font-weight: 500;
   position: absolute;
-  bottom: 0;
+  bottom: 15px;
   left: 35px;
   color: #9b9595;
 }
