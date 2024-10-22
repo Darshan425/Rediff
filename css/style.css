@@ -43,26 +43,27 @@ body {
 .navbar {
   background: #fff;
   height: auto;
-  margin: 0 auto 20px auto;
+  margin: 0 auto 80px auto;
 }
 .navbar .navbarul {
   border-top: 2px solid #000;
   padding; 5px 0 0 0;
 }
-.navbar .navbarul li {
+.navbar .navbarul > li {
   padding: 10px 15px;
   color: #111;
   font-weight: 600;
+  position:initial;
 }
-.navbar .navbarul li a {
+.navbar .navbarul li > a {
   color: #111;
 }
-.navbar .navbarul li::after {
+.navbar .navbarul > li::after {
   top: 50%;
   transform: translateY(-50%);
   display: none;
 }
-.navbar .navbarul li:first-child:before {
+.navbar .navbarul > li:first-child:before {
   background: #fff;
   left: 0;
   right: 0;
@@ -303,6 +304,7 @@ body {
   color: #174e96;
   font-family: "Libre Baskerville", serif;
   position: relative;
+  text-align:left;
 }
 .nbox::after {
   content: "22hours ago";
@@ -637,8 +639,72 @@ h2.hdtitle.video-icon::before {
     font-weight:600;
   }
 }
+.navbar{
+  position: relative;
+}
+.navbar .sub-navbar1 {
+  position: absolute;
+  left: 0;
+  width: 96%;
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  padding: 0;
+  left: 20px;
+  background: #fff;
+  box-shadow: 0 0 8px #ccc;
+  border: 1px solid #000;
+  border-radius: 7px;
+  transition: .5s;
+  transform: translateY(-55px);
+  opacity: 0;
+}
+.navbar .sub-navbar1::before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: -11px;
+  left: 85px;
+  background: #fff;
+  border-top: 1px solid #000;
+  border-right: 1px solid #000;
+  transform: rotate(-45deg);
+}
+.navbar .sub-navbar1 a {
+  padding: 15px 19px;
+  display: inline-block;
+  line-height: 1;
+  border: 0;
+}
+.navbar .navbarul > li.news:hover ul.sub-navbar1 {
+  transition: .5s;
+  transform: translateY(16px);
+  /* display: block; */
+  opacity: 1;
+}
+/* .navbar .sub-navbar1 li.active a {
+  background: #dbd4d4;
+  border-radius: 6px 0 0 6px;
+} */
 
+.navbar .sub-navbar1 li a:hover {
+  border: 0;
+}
+.navbar .sub-navbar1 li:first-child:before{
+  content:none;
 
+}
+.navbarul li:after {
+  content: '';
+  position: absolute;
+  right: -2px;
+  width: 1px;
+  height: 18px;
+  top: 50%;
+  background: #817f7f;
+  transform: translateY(-50%);
+}
 @media screen and (max-height: 450px) {
   .overlay a {font-size: 20px}
   .overlay .closebtn {
