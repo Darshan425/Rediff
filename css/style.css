@@ -203,6 +203,9 @@ body {
   align-items: center;
   justify-content: center;
   z-index: 99;
+  background: url(../images/news.png) no-repeat center center;
+    content: "";
+    background-size: 100%;
 }
 .nbox .more:has(.backgurus)::before {
   content: "RG";
