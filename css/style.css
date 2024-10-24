@@ -940,6 +940,9 @@ body iframe {
 .videos.active {
   flex-direction: column;
 }
+.footer-l .footer-content .about-us {
+  padding: 0 0 30px 0;
+}
 
 
 } 
