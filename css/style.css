@@ -937,6 +937,9 @@ body iframe {
 .red_container {
   padding: 0 12px;
 }
+.videos.active {
+  flex-direction: column;
+}
 
 
 } 
@@ -984,11 +987,15 @@ body iframe {
   top: 0;
   height: 100%;
   width: 250px;
-  background-color: #333;
+  background-color: #fff;
   transition: 0.3s;
-  padding-top: 60px;
+  padding-top: 30px;
   z-index: 1000;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  text-align:left;
+}
+.sidebar .logo{
+  margin: 0 0 20px 25px;
 }
 
 .sidebar a {
@@ -1051,7 +1058,7 @@ body iframe {
   padding: 15px 20px;
   font-size: 18px;
   cursor: pointer;
-  color: white;
+  color: #111;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1063,13 +1070,15 @@ body iframe {
 }
 
 .submenu a {
-  padding-left: 40px;
+  padding-left: 20px;
+  color: #111;
 }
 
 .plusicon {
   transition: transform 0.3s ease;
+  color: #111;
 }
 
 .plusicon.rotate {
-  transform: rotate(45deg);
+  transform: rotate(180deg);
 }
