@@ -292,7 +292,6 @@ body {
   height: 270px;
   margin: 9px 20px 20px 0;
   position: relative;
-  border-bottom: 1px solid #ccc;
 }
 .bigstory{
   border-bottom: 1px solid #ccc;
@@ -628,8 +627,10 @@ h2.hdtitle.video-icon::before {
 
 .videos.active {
   display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  border-bottom: 1px solid;
 }
-
 .video-item {
   margin: 10px 0;
   background-color: white;
@@ -659,7 +660,7 @@ h2.hdtitle.video-icon::before {
   border: 1px solid #000;
   border-radius: 7px;
   transition: .5s;
-  opacity: 0;
+  opacity: 1;
   bottom: -52px;
 }
 .navbar .sub-navbar1::before {
@@ -715,7 +716,15 @@ h2.hdtitle.video-icon::before {
   right: 35px;
   }
 }
+.secstorybox h3 {
+  border-bottom: 0 !important;
+}
 
+
+.sb-content {
+  border-bottom: 1px solid #111;
+  padding: 20px 0 0 0;
+}
 
 
  @media only screen and (max-width: 767px) {
