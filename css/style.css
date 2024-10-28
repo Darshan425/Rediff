@@ -258,7 +258,7 @@ body {
 }
 .nbox .more:has(.backbusiness)::before {
   content: "B";
-  background: #000 url(../images/BN.png) no-repeat center center;
+  background: #000 url(../images/bn.png) no-repeat center center;
   content: "";
   BACKGROUND-SIZE: 69%;
 }
